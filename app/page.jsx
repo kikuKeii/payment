@@ -8,7 +8,7 @@ import NavButton from "@/component/navButton";
 import FooterDesktop from "@/component/footerDesktop";
 const Home = () => {
   useEffect(() => {
-    import("bootstrap/dist/js/bootstrap");
+    //d
   }, []);
   const [email, setEmail] = useState("");
   const [validEmail, setValidEmail] = useState("");
