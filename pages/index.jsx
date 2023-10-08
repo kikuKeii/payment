@@ -15,7 +15,7 @@ import { useRouter } from "next/router";
 const axios = require("axios");
 
 const Home = () => {
-  const baseUrl = "https://payment-kiki.vercel.app";
+  const baseUrl = "";
   const router = useRouter();
 
   const [snapToken, setSnapToken] = useState();
@@ -259,7 +259,7 @@ const Home = () => {
         >
           <div className="col-10 col-sm-8 col-lg-6 pt-3">
             <Image
-              src="/assets/img/hero.png"
+              src={baseUrl + "/assets/img/hero.png"}
               alt="Hero"
               className="d-block mx-lg-auto img-fluid"
               width={700}
