@@ -1,5 +1,5 @@
-import NavButton from "@/component/navButton";
-import NavMobile from "@/component/navMobile";
+import NavButton from "../component/navButton";
+import NavMobile from "../component/navMobile";
 import Head from "next/head";
 
 const Setting = () => {

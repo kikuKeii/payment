@@ -3,10 +3,10 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { useState, useEffect } from "react";
-import FooterDesktop from "@/component/footerDesktop";
-import NavButton from "@/component/navButton";
-import NavDesktop from "@/component/navDesktop";
-import NavMobile from "@/component/navMobile";
+import FooterDesktop from "../component/footerDesktop";
+import NavButton from "../component/navButton";
+import NavDesktop from "../component/navDesktop";
+import NavMobile from "../component/navMobile";
 import Head from "next/head";
 import Image from "next/image";
 import Swal from "sweetalert2";
