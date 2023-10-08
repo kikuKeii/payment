@@ -2,7 +2,7 @@ require("dotenv").config();
 const cors = require("cors"); // Import the cors package
 
 const corsOptions = {
-  origin: "http://localhost:3000", // Allow requests from your local development environment
+  origin: ["https://kikukeii.github.io", "https://payment-kiki.vercel.app"], // Allow requests from your local development environment
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
 };
