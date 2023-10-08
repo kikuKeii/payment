@@ -2,7 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   images: { unoptimized: true },
-  basePath: "/payment",
   output: "export",
 };
 
