@@ -15,7 +15,7 @@ require("dotenv").config();
 
 const axios = require("axios");
 var prod = false;
-const linkMid = "https://app.sandbox.midtrans.com/snap/snap.js";
+var linkMid = "https://app.sandbox.midtrans.com/snap/snap.js";
 const baseUrl = "https://payment-kiki.vercel.app";
 var clientKey = process.env.CLIENT_KEY;
 if (process.env.IS_PRODUCTION == "production") {
