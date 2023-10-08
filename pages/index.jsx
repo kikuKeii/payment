@@ -235,7 +235,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Cek Ketersediaan Kamar</title>
+        <title>Payment</title>
         <link rel="icon" href="/assets/favicon/apple-icon-76x76.png" />
         <link
           rel="stylesheet"
