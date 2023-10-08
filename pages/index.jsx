@@ -15,7 +15,7 @@ import { useRouter } from "next/router";
 const axios = require("axios");
 
 const Home = () => {
-  const baseUrl = "";
+  const baseUrl = "https://payment-kiki.vercel.app/";
   const router = useRouter();
 
   const [snapToken, setSnapToken] = useState();
