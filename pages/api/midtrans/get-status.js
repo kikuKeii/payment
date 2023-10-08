@@ -7,9 +7,10 @@ const corsOptions = {
 export default function handler(req, res) {
   cors(corsOptions)(req, res, () => {
     const midtransClient = require("midtrans-client");
-    var prod = false;
     if (process.env.IS_PRODUCTION == "production") {
-      prod = true;
+      var prod = true;
+    } else {
+      var prod = false;
     }
     const core = new midtransClient.CoreApi({
       isProduction: prod,

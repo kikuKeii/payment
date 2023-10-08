@@ -14,13 +14,15 @@ import { useRouter } from "next/router";
 require("dotenv").config();
 
 const axios = require("axios");
-var prod = false;
-var linkMid = "https://app.sandbox.midtrans.com/snap/snap.js";
+
 const baseUrl = "https://payment-kiki.vercel.app";
 var clientKey = process.env.CLIENT_KEY;
 if (process.env.IS_PRODUCTION == "production") {
-  prod = true;
-  linkMid = "https://app.midtrans.com/snap/snap.js";
+  var prod = true;
+  var linkMid = "https://app.midtrans.com/snap/snap.js";
+} else {
+  var prod = false;
+  var linkMid = "https://app.sandbox.midtrans.com/snap/snap.js";
 }
 const Home = () => {
   const router = useRouter();
