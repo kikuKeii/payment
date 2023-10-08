@@ -11,11 +11,18 @@ import Head from "next/head";
 import Image from "next/image";
 import Swal from "sweetalert2";
 import { useRouter } from "next/router";
+require("dotenv").config();
 
 const axios = require("axios");
-
+var prod = false;
+const linkMid = "https://app.sandbox.midtrans.com/snap/snap.js";
+const baseUrl = "https://payment-kiki.vercel.app";
+var clientKey = process.env.CLIENT_KEY;
+if (process.env.IS_PRODUCTION == "production") {
+  prod = true;
+  linkMid = "https://app.midtrans.com/snap/snap.js";
+}
 const Home = () => {
-  const baseUrl = "https://payment-kiki.vercel.app";
   const router = useRouter();
 
   const [snapToken, setSnapToken] = useState();
@@ -242,8 +249,8 @@ const Home = () => {
         ></link>
         <script
           type="text/javascript"
-          src="https://app.sandbox.midtrans.com/snap/snap.js"
-          data-client-key="SB-Mid-client-86Hg0Nfnjaavt03r"
+          src={linkMid}
+          data-client-key={clientKey}
           async
         ></script>
       </Head>
