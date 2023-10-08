@@ -144,11 +144,9 @@ const Home = () => {
       },
       onPending: function (result) {
         alert("wating your payment!");
-        console.log(result);
       },
       onError: function (result) {
         alert("payment failed!");
-        console.log(result);
       },
       onClose: function () {
         Swal.fire({
