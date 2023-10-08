@@ -15,6 +15,7 @@ import { useRouter } from "next/router";
 const axios = require("axios");
 
 const Home = () => {
+  const baseUrl = "https://payment-kiki.vercel.app";
   const router = useRouter();
 
   const [snapToken, setSnapToken] = useState();
@@ -35,7 +36,7 @@ const Home = () => {
       const sendData = {
         order_id: order_id,
       };
-      const url = "./api/midtrans/get-status";
+      const url = baseUrl + "/api/midtrans/get-status";
       axios
         .post(url, sendData)
         .then((response) => {
@@ -106,7 +107,7 @@ const Home = () => {
         email: email,
         phone: phone,
       };
-      const url = "./api/midtrans";
+      const url = baseUrl + "/api/midtrans";
       axios
         .post(url, postData)
         .then((response) => {
