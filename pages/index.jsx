@@ -30,10 +30,8 @@ const Home = () => {
   var clientKey = process.env.CLIENT_KEY;
   useEffect(() => {
     if (process.env.IS_PRODUCTION == "production") {
-      console.log("Prof ==================================");
       setLinkMid("https://app.midtrans.com/snap/snap.js");
     } else {
-      console.log("ssssssssssssssssssssDEv");
       setLinkMid("https://app.sandbox.midtrans.com/snap/snap.js");
     }
     handleSatatus();
