@@ -16,17 +16,6 @@ require("dotenv").config();
 const axios = require("axios");
 
 const Home = () => {
-  const baseUrl = "https://payment-kiki.vercel.app";
-  var clientKey = process.env.CLIENT_KEY;
-  if (process.env.IS_PRODUCTION == "production") {
-    console.log("Prof ==================================");
-    var prod = true;
-    var linkMid = "https://app.midtrans.com/snap/snap.js";
-  } else {
-    console.log("ssssssssssssssssssssDEv");
-    var prod = false;
-    var linkMid = "https://app.sandbox.midtrans.com/snap/snap.js";
-  }
   const router = useRouter();
 
   const [snapToken, setSnapToken] = useState();
@@ -35,9 +24,18 @@ const Home = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [total, setTotal] = useState(10000);
+  const [linkMid, setLinkMid] = useState("");
   const { order_id } = router.query;
-
+  const baseUrl = "https://payment-kiki.vercel.app";
+  var clientKey = process.env.CLIENT_KEY;
   useEffect(() => {
+    if (process.env.IS_PRODUCTION == "production") {
+      console.log("Prof ==================================");
+      setLinkMid("https://app.midtrans.com/snap/snap.js");
+    } else {
+      console.log("ssssssssssssssssssssDEv");
+      setLinkMid("https://app.sandbox.midtrans.com/snap/snap.js");
+    }
     handleSatatus();
   }, [order_id]);
 
