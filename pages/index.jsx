@@ -26,7 +26,7 @@ const Home = () => {
   const [total, setTotal] = useState(10000);
   const [linkMid, setLinkMid] = useState("");
   const { order_id } = router.query;
-  const baseUrl = "http://localhost:3000/";
+  const baseUrl = "https://payment-kiki.vercel.app";
   var clientKey = process.env.CLIENT_KEY;
   useEffect(() => {
     if (true) {
@@ -250,7 +250,7 @@ const Home = () => {
         <script
           type="text/javascript"
           src="https://app.midtrans.com/snap/snap.js"
-          data-client-key={clientKey}
+          data-client-key="Mid-client-1XEJw8uo8ykK2H3_"
           async
         ></script>
       </Head>
